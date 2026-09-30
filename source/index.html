@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0d12">
+    <title>Cipherly — Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <a class="brand" href="#">
+                <span class="brand-icon">🔐</span>
+                cipherly<span class="brand-dot">.</span>
+            </a>
+            <span class="header-tag">PASSWORD STUDIO</span>
+        </header>
+
+        <section class="intro">
+            <div class="eyebrow"><span></span> YOUR SECURITY, SIMPLIFIED</div>
+            <h1>Create a password<br>that's <span>yours.</span></h1>
+            <p>Generate a strong, random password in seconds. Simple, secure, and entirely yours.</p>
+        </section>
+
+        <section class="generator">
+            <div class="section-top">
+                <div>
+                    <span class="step">01 / GENERATE</span>
+                    <h2>Your password</h2>
+                </div>
+                <span class="secure-badge"><span>●</span> Local generation</span>
+            </div>
+
+            <div class="password-box">
+                <input id="passwordOutput" type="text"
+                    value="" readonly aria-label="Generated password"
+                    spellcheck="false" autocomplete="off">
+                <button id="copyBtn" class="copy-btn" aria-label="Copy password"
+                    title="Copy password">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                        <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="password-meta">
+                <div class="strength">
+                    <span class="strength-label">STRENGTH</span>
+                    <div class="strength-bars" id="strengthBars">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <span id="strengthText">Strong</span>
+                </div>
+                <span id="charCount">16 characters</span>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+                <span>✳</span> Generate password <span class="button-arrow">↗</span>
+            </button>
+
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+
+            <div class="divider"></div>
+
+            <div class="section-top options-heading">
+                <div>
+                    <span class="step">02 / CUSTOMIZE</span>
+                    <h2>Make it yours</h2>
+                </div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-title">
+                    <label>Difficulty level</label>
+                    <span id="levelDescription">Balanced & versatile</span>
+                </div>
+
+                <div class="level-options">
+                    <button class="level-card" data-level="easy">
+                        <span class="level-symbol">○</span>
+                        <span class="level-name">Easy</span>
+                        <span class="level-detail">Lowercase</span>
+                    </button>
+                    <button class="level-card active" data-level="medium">
+                        <span class="level-symbol">◈</span>
+                        <span class="level-name">Medium</span>
+                        <span class="level-detail">Mixed case</span>
+                    </button>
+                    <button class="level-card" data-level="hard">
+                        <span class="level-symbol">✳</span>
+                        <span class="level-name">Hard</span>
+                        <span class="level-detail">Maximum mix</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="option-block length-block">
+                <div class="option-title">
+                    <label for="length">Password length</label>
+                    <div class="length-value"><span id="lengthValue">16</span><span> / 20</span></div>
+                </div>
+                <input type="range" id="length" min="1" max="20" value="16">
+                <div class="range-labels"><span>1 character</span><span>20 characters</span></div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-title">
+                    <label>Character types</label>
+                    <span>Optional</span>
+                </div>
+
+                <div class="checkbox-options">
+                    <label class="check-card">
+                        <input type="checkbox" id="includeNumbers">
+                        <span class="custom-check"></span>
+                        <span class="check-icon">123</span>
+                        <span class="check-copy">
+                            <strong>Numbers</strong>
+                            <small>0–9</small>
+                        </span>
+                    </label>
+
+                    <label class="check-card">
+                        <input type="checkbox" id="includeSymbols">
+                        <span class="custom-check"></span>
+                        <span class="check-icon">!@#</span>
+                        <span class="check-copy">
+                            <strong>Special characters</strong>
+                            <small>! @ # $ % &amp; *</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span><span class="footer-dot">●</span> Generated locally in your browser</span>
+            <span>Made with care. <b>Stay secure.</b></span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
