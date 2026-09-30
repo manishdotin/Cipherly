@@ -1,6 +1,6 @@
 # Cipherly 🔐
 
-A simple password generator built with HTML, CSS, and JavaScript. Generate random passwords with customizable length and complexity. Built as a frontend mini-project to practise JavaScript, DOM manipulation, event handling, and browser cryptography.
+A simple password generator built with HTML, CSS, and JavaScript. Generate random passwords with customizable length and complexity. Built as a frontend mini-project to practice JavaScript, DOM manipulation, event handling, and browser cryptography.
 
 ## ✨ Features
 
